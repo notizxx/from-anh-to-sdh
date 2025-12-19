@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,44 +11,82 @@
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
+<div class="overlay"></div>
+
 <div class="container">
-    <h1>Selamat Ulang Tahun</h1>
-    <p class="subtitle">Untuk seseorang yang pernah sangat berarti</p>
+    <h1 class="fade-in">Selamat Ulang Tahun</h1>
+    <p class="subtitle fade-in-delay">
+        Untuk seseorang yang pernah menjadi rumah,
+        meski kini hanya tinggal kenangan.
+    </p>
 
-    <button onclick="openMessage()">Buka Pesan Terakhir</button>
+    <button onclick="openAll()">Buka Kado Terakhir</button>
 
-    <div id="message" class="hidden">
-        <p>
-            Hari ini seharusnya aku hanya mengucapkan selamat.  
-            Tapi ada hal yang tak pernah benar-benar sempat aku perbaiki.
-        </p>
+    <div id="content" class="hidden">
+        
+        <!-- FOTO -->
+        <div class="photos">
+            <img src="photo1.jpg" alt="Kenangan">
+            <img src="photo2.jpg" alt="Kenangan">
+            <img src="photo3.jpg" alt="Kenangan">
+        </div>
 
-        <p>
-            Aku minta maaf…  
-            atas kebohongan yang pernah aku buat,  
-            atas rasa percaya yang pernah aku rusak.
-        </p>
+        <!-- PESAN -->
+        <div class="message">
+            <p>
+                Hari ini aku tidak datang untuk mengganggumu,
+                juga tidak untuk mengulang cerita yang telah usai.
+            </p>
 
-        <p>
-            Aku tidak datang untuk meminta kembali,  
-            tidak juga untuk membuka luka.
-        </p>
+            <p>
+                Aku hanya ingin mengucapkan selamat ulang tahun,
+                dengan cara paling tenang yang bisa aku lakukan.
+            </p>
 
-        <p>
-            Aku hanya ingin kamu tahu,  
-            bahwa kamu pernah menjadi bagian yang indah dalam hidupku.
-        </p>
+            <p>
+                Aku minta maaf,
+                tanpa pembelaan,
+                tanpa alasan,
+                atas kebohongan yang pernah aku lakukan.
+            </p>
 
-        <p>
-            Semoga di umur barumu,  
-            kamu dikelilingi oleh kejujuran, ketenangan,  
-            dan seseorang yang bisa menjagamu lebih baik dari caraku.
-        </p>
+            <p>
+                Aku paham,
+                ada hal yang tidak bisa diperbaiki,
+                dan aku sudah belajar menerimanya.
+            </p>
 
-        <p class="last">
-            Ini kado terakhir dariku.  
-            Terima kasih, dan selamat tinggal dengan damai.
-        </p>
+            <p>
+                Terima kasih,
+                karena pernah percaya,
+                pernah bertahan,
+                dan pernah menjadi bagian yang berarti.
+            </p>
+
+            <p>
+                Aku tidak membawa harapan,
+                tidak juga permintaan.
+            </p>
+
+            <p>
+                Aku hanya ingin kamu melangkah ke depan
+                tanpa bayangan kesalahanku di belakangmu.
+            </p>
+
+            <p>
+                Semoga di usia barumu,
+                kamu menemukan kejujuran,
+                ketenangan,
+                dan seseorang yang mampu menjagamu
+                dengan cara yang dulu gagal aku lakukan.
+            </p>
+
+            <p class="last">
+                Ini adalah kado terakhir dariku.  
+                Aku melepaskanmu dengan hormat.  
+                Selamat ulang tahun.
+            </p>
+        </div>
     </div>
 </div>
 
