@@ -1,63 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Georgia', serif;
-    background: linear-gradient(120deg, #0f0f14, #1c1c2b);
+    background: radial-gradient(circle at top, #1b1b2f, #0f0f14);
     color: #eaeaea;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
 }
 
 .container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    padding: 80px 20px;
     text-align: center;
-    max-width: 600px;
-    padding: 40px;
-    animation: fadeIn 2s ease;
 }
 
 h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+    font-size: 42px;
+    letter-spacing: 1px;
 }
 
 .subtitle {
     font-style: italic;
-    opacity: 0.8;
-    margin-bottom: 30px;
+    opacity: 0.75;
+    margin-bottom: 40px;
 }
 
 button {
     background: transparent;
-    border: 1px solid #aaa;
+    border: 1px solid rgba(255,255,255,0.6);
     color: #fff;
-    padding: 12px 30px;
-    cursor: pointer;
+    padding: 14px 36px;
     font-size: 16px;
-    transition: 0.3s;
+    cursor: pointer;
+    transition: 0.4s;
 }
 
 button:hover {
     background: rgba(255,255,255,0.1);
 }
 
-#message {
-    margin-top: 30px;
-    line-height: 1.8;
-    animation: fadeIn 2s ease;
-}
-
 .hidden {
     display: none;
 }
 
+/* FOTO */
+.photos {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 200px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 2s forwards;
+}
+
+/* PESAN */
+.message {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+.message p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1.8s forwards;
+}
+
+.message p:nth-child(n) {
+    animation-delay: calc(var(--i) * 0.3s);
+}
+
 .last {
-    margin-top: 25px;
+    margin-top: 30px;
     font-style: italic;
-    opacity: 0.7;
+    opacity: 0.8;
+}
+
+/* ANIMASI */
+.fade-in {
+    animation: fadeIn 2s ease forwards;
+}
+
+.fade-in-delay {
+    animation: fadeIn 2.5s ease forwards;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
